@@ -65,7 +65,7 @@ export default {
       for (const index in arr) {
         let title = arr[index].title;
         console.log(arr[index].title);
-        let userJsonStr = sessionStorage.getItem(title);
+        let userJsonStr = localStorage.getItem(title);
         if(userJsonStr != null) {
           let taskEntity = JSON.parse(userJsonStr);
           console.log(taskEntity);
@@ -80,7 +80,7 @@ export default {
       row.done = !row.done;
       let title = row.title;
       // 保存数据
-      sessionStorage.setItem(title, JSON.stringify(row));
+      localStorage.setItem(title, JSON.stringify(row));
       console.log("save success " + title)
 
     }
