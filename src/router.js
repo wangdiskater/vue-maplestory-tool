@@ -18,6 +18,7 @@ const routes = [
       {
         path: "dashboard",
         name: "Dashboard",
+        cn: "仪表盘",
         component: Dashboard,
       },
       {

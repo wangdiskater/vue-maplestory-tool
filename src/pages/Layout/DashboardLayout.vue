@@ -9,7 +9,7 @@
         <i class="tim-icons icon-chart-pie-36"></i>
 
         <template v-if="!isRTL">
-          <p>Dashboard</p>
+          <p>任务总览</p>
         </template>
 
         <template v-else>
@@ -17,7 +17,7 @@
         </template>
       </sidebar-link>
 
-      <sidebar-link to="/icons">
+      <!-- <sidebar-link to="/icons">
         <i class="tim-icons icon-atom"></i>
 
         <template v-if="!isRTL">
@@ -27,9 +27,9 @@
         <template v-else>
           <p>الرموز</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/maps">
+      <!-- <sidebar-link to="/maps">
         <i class="tim-icons icon-pin"></i>
 
         <template v-if="!isRTL">
@@ -39,9 +39,9 @@
         <template v-else>
           <p>خرائط</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/notifications">
+      <!-- <sidebar-link to="/notifications">
         <i class="tim-icons icon-bell-55"></i>
 
         <template v-if="!isRTL">
@@ -51,9 +51,9 @@
         <template v-else>
           <p>إخطارات</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/user">
+      <!-- <sidebar-link to="/user">
         <i class="tim-icons icon-single-02"></i>
 
         <template v-if="!isRTL">
@@ -63,9 +63,9 @@
         <template v-else>
           <p>ملف تعريفي للمستخدم</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/table">
+      <!-- <sidebar-link to="/table">
         <i class="tim-icons icon-puzzle-10"></i>
 
         <template v-if="!isRTL">
@@ -75,9 +75,9 @@
         <template v-else>
           <p>قائمة الجدول</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/typography">
+      <!-- <sidebar-link to="/typography">
         <i class="tim-icons icon-align-center"></i>
 
         <template v-if="!isRTL">
@@ -87,9 +87,9 @@
         <template v-else>
           <p>طباعة</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/dashboard?enableRTL=true">
+      <!-- <sidebar-link to="/dashboard?enableRTL=true">
         <i class="tim-icons icon-world"></i>
 
         <template v-if="!isRTL">
@@ -99,9 +99,9 @@
         <template v-else>
           <p>دعم RTL</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
 
-      <sidebar-link to="/upgradeToPro" class="active-pro">
+      <!-- <sidebar-link to="/upgradeToPro" class="active-pro">
         <i class="tim-icons icon-spaceship"></i>
 
         <template v-if="!isRTL">
@@ -111,10 +111,10 @@
         <template v-else>
           <p>التطور للاحترافية</p>
         </template>
-      </sidebar-link>
+      </sidebar-link> -->
     </side-bar>
 
-    <sidebar-share :background-color.sync="backgroundColor"></sidebar-share>
+    <!-- <sidebar-share :background-color.sync="backgroundColor"></sidebar-share> -->
 
     <div class="main-panel" :data="backgroundColor">
       <top-navbar></top-navbar>

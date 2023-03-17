@@ -33,11 +33,11 @@ export default {
   props: {
     abv: {
       type: String,
-      default: "CT",
+      default: "M",
     },
     title: {
       type: String,
-      default: "Creative Tim",
+      default: "枫之谷上班小助手",
     },
     backgroundColor: {
       type: String,

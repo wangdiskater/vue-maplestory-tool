@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-12">
         <card type="chart">
           <template slot="header">
@@ -134,42 +134,84 @@
           </line-chart>
         </card>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <card type="tasks">
+        <card type="tasks" class="task">
           <template slot="header">
             <template v-if="!isRTL">
-              <h6 class="title d-inline">Tasks(5)</h6>
+              <h6 class="title d-inline">签到、点击、挂机类</h6>
             </template>
             <template v-else>
               <h6 class="title d-inline">الشحنات</h6>
             </template>
             <template v-if="!isRTL">
-              <p class="card-category d-inline">Today</p>
+              <p class="card-category d-inline">today</p>
             </template>
-            <drop-down tag="div" :class="isRTL ? 'float-left' : ''">
-              <button
-                aria-label="Settings menu"
-                data-toggle="dropdown"
-                class="dropdown-toggle btn-rotate btn btn-link btn-icon"
-                :class="isRTL ? 'pl-5' : ''"
-              >
-                <i class="tim-icons icon-settings-gear-63"></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <a href="#pablo" class="dropdown-item">Action</a>
-                <a href="#pablo" class="dropdown-item">Another Action</a>
-                <a href="#pablo" class="dropdown-item">Something else</a>
-              </ul>
-            </drop-down>
           </template>
           <div class="table-full-width table-responsive">
-            <task-list></task-list>
+            <task-list tag="today"></task-list>
           </div>
         </card>
       </div>
+
       <div class="col-lg-6 col-md-12">
+        <card type="tasks" class="task">
+          <template slot="header">
+            <template v-if="!isRTL">
+              <h6 class="title d-inline">消灭怪物类</h6>
+            </template>
+            <template v-else>
+              <h6 class="title d-inline">الشحنات</h6>
+            </template>
+            <template v-if="!isRTL">
+              <p class="card-category d-inline">today</p>
+            </template>
+          </template>
+          <div class="table-full-width table-responsive">
+            <task-list tag="today2"></task-list>
+          </div>
+        </card>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <card type="tasks" class="task">
+          <template slot="header">
+            <template v-if="!isRTL">
+              <h6 class="title d-inline">任务副本类</h6>
+            </template>
+            <template v-else>
+              <h6 class="title d-inline">الشحنات</h6>
+            </template>
+            <template v-if="!isRTL">
+              <p class="card-category d-inline">today</p>
+            </template>
+          </template>
+          <div class="table-full-width table-responsive">
+            <task-list tag="today3"></task-list>
+          </div>
+        </card>
+      </div>
+
+      <div class="col-lg-6 col-md-12">
+        <card type="tasks" class="task">
+          <template slot="header">
+            <template v-if="!isRTL">
+              <h6 class="title d-inline">周任务</h6>
+            </template>
+            <template v-else>
+              <h6 class="title d-inline">الشحنات</h6>
+            </template>
+            <template v-if="!isRTL">
+              <p class="card-category d-inline">week</p>
+            </template>
+          </template>
+          <div class="table-full-width table-responsive">
+            <task-list tag="week"></task-list>
+          </div>
+        </card>
+      </div>
+      <!-- <div class="col-lg-6 col-md-12">
         <card class="card">
           <h4 slot="header" class="card-title">
             <template v-if="!isRTL"> Simple Table </template>
@@ -179,7 +221,7 @@
             <user-table></user-table>
           </div>
         </card>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -338,7 +380,7 @@ export default {
           "DEC",
         ],
       };
-      this.$refs.bigChart.updateGradients(chartData);
+      // this.$refs.bigChart.updateGradients(chartData);
       this.bigLineChart.chartData = chartData;
       this.bigLineChart.activeIndex = index;
     },
@@ -359,4 +401,9 @@ export default {
   },
 };
 </script>
-<style></style>
+<style>
+.card {
+  height: 280px;
+}
+
+</style>

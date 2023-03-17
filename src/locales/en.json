@@ -79,46 +79,178 @@
     },
     "taskList": [
       {
-        "title": "Update the Documentation",
-        "description": "Dwuamish Head, Seattle, WA 8:47 AM",
+        "title": "领取联盟币",
+        "description": "联盟窗口点击领取联盟币",
         "done": false
       },
       {
-        "title": "GDPR Compliance",
-        "description": "The GDPR is a regulation that requires businesses to protect the personal data and privacy of Europe citizens for transactions that occur within EU member states.",
-        "done": true
-      },
-      {
-        "title": "Solve the issues",
-        "description": "Fifty percent of all respondents said they would be more likely to shop at a company",
+        "title": "怪物收藏",
+        "description": "领取怪物收藏奖励",
         "done": false
       },
       {
-        "title": "Release v2.0.0",
-        "description": "Ra Ave SW, Seattle, WA 98116, SUA 11:19 AM",
+        "title": "公会点名",
+        "description": "让我看看是哪个没点？",
         "done": false
       },
       {
-        "title": "Export the processed files",
-        "description": "The report also shows that consumers will not easily forgive a company once a breach exposing their personal data occurs.",
+        "title": "枫方块",
+        "description": "没事枫一下",
         "done": false
       },
       {
-        "title": "Arival at export process",
-        "description": "Capitol Hill, Seattle, WA 12:34 AM",
+        "title": "妖精马车",
+        "description": "没事就点一下",
+        "done": false
+      },
+      {
+        "title": "引燃点名",
+        "description": "记得先刷满今天的引燃币",
+        "done": false
+      },
+      {
+        "title": "引燃挂机15分钟",
+        "description": "每五次做完会获取称号",
+        "done": false
+      },
+      {
+        "title": "魔法马车",
+        "description": "六小时更新一次",
+        "done": false
+      },
+      {
+        "title": "家具收集",
+        "description": "记得回小屋看看哦",
+        "done": false
+      }
+    ],
+    "taskList2": [
+      {
+        "title": "活动刷币",
+        "description": "引燃活动刷满币记得点名",
+        "done": false
+      },
+      {
+        "title": "HappyDay~",
+        "description": "消灭怪物记得领取奥，最后可以换传说卷",
+        "done": false
+      },
+      {
+        "title": "AUT任务",
+        "description": "今天也要加油哦",
+        "done": false
+      },
+      {
+        "title": "ARC任务",
+        "description": "今天也要加油哦",
+        "done": false
+      }
+
+    ],
+    "taskList3": [
+      {
+        "title": "终极怪物公园",
+        "description": "260以上才可以去",
+        "done": false
+      },
+      {
+        "title": "怪物公园",
+        "description": "每天免费两次记得刷，周日经验",
+        "done": false
+      },
+      {
+        "title": "航海任务",
+        "description": "组航和单人不共享能量",
+        "done": false
+      },
+      {
+        "title": "贝勒德",
+        "description": "能3核就不要混车了",
+        "done": false
+      },
+      {
+        "title": "乌鲁斯",
+        "description": "100级以上参加，账号三次",
+        "done": false
+      },    {
+        "title": "红石BOSS",
+        "description": "炎魔，老麦，希腊，四傻，狮子王，黑龙，阿卡，皮卡丘，女皇任意模式",
+        "done": false
+      },
+      {
+        "title": "BOSS里程",
+        "description": "打完BOSS左边一键领取",
+        "done": false
+      },
+      {
+        "title": "活动小游戏",
+        "description": "给活动点数可以兑换经验",
+        "done": false
+      },
+      {
+        "title": "ARC小游戏",
+        "description": "你喜欢就做一下",
+        "done": false
+      }
+
+    ],
+    "weekTaskList": [
+      {
+        "title": "公会跑旗",
+        "description": "家族界面进入跑旗",
+        "done": false
+      },
+      {
+        "title": "公会下水道",
+        "description": "进入下水道打",
+        "done": false
+      },
+      {
+        "title": "公会城5000怪",
+        "description": "进入公会城然后打怪大概20min",
+        "done": false
+      },
+      {
+        "title": "公会城奖励",
+        "description": "领取奖励，每周G药水也记得领",
+        "done": false
+      },
+      {
+        "title": "每周BOSS",
+        "description": "进阶",
+        "done": false
+      },
+      {
+        "title": "每周BOSS硬币",
+        "description": "BOSS币",
+        "done": false
+      },
+      {
+        "title": "卖BOSS结晶",
+        "description": "记得卖结晶",
+        "done": false
+      },
+      {
+        "title": "Boss里程结算",
+        "description": "同每日",
+        "done": false
+      },
+      {
+        "title": "武陵道场",
+        "description": "强者的世界",
         "done": false
       }
     ]
   },
   "sidebar": {
-    "title": "Creative Tim",
-    "shortTitle": "CT",
-    "dashboard": "dashboard",
+    "title": "枫之谷小助手",
+    "shortTitle": "maple",
+    "dashboard": "仪表盘",
     "icons": "Icons",
     "maps": "Maps",
-    "notifications": "Notifications",
-    "userProfile": "User Profile",
-    "tableList": "Table List",
+    "notifications": "提醒",
+    "userProfile": "用户信息",
+    "tableList": "任务列表",
     "typography": "Typography",
     "rtlSupport": "RTL Support"
   }
