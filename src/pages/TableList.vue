@@ -209,6 +209,6 @@ export default {
 </script>
 <style>
 .table-card {
-  height: 80%;
+  height: 100%;
 }
 </style>
