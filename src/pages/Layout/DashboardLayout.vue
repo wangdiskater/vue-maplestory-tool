@@ -65,17 +65,17 @@
         </template>
       </sidebar-link> -->
 
-      <!-- <sidebar-link to="/table">
+      <sidebar-link to="/table">
         <i class="tim-icons icon-puzzle-10"></i>
 
         <template v-if="!isRTL">
-          <p>Table List</p>
+          <p>经验道具列表</p>
         </template>
 
         <template v-else>
           <p>قائمة الجدول</p>
         </template>
-      </sidebar-link> -->
+      </sidebar-link>
 
       <!-- <sidebar-link to="/typography">
         <i class="tim-icons icon-align-center"></i>

@@ -40,6 +40,8 @@ export default {
           return this.$t("dashboard.taskList2");
         case "today3":
           return this.$t("dashboard.taskList3");
+        case "exp":
+          return this.$t("dashboard.exp");
       }
       return this.$t("dashboard.weekTaskList");
     },
@@ -56,6 +58,9 @@ export default {
           break;
         case "today3":
           arr =  this.$t("dashboard.taskList3");
+          break;
+        case "exp":
+          arr = this.$t("dashboard.exp");
           break;
         default:
           arr = this.$t("dashboard.weekTaskList");
