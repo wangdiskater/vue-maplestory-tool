@@ -104,18 +104,8 @@
         "done": false
       },
       {
-        "title": "引燃点名",
-        "description": "记得先刷满今天的引燃币",
-        "done": false
-      },
-      {
-        "title": "引燃挂机15分钟",
-        "description": "每五次做完会获取称号",
-        "done": false
-      },
-      {
-        "title": "魔法马车",
-        "description": "六小时更新一次",
+        "title": "HappyDay~",
+        "description": "消灭怪物记得领取奥，最后可以换传说卷",
         "done": false
       },
       {
@@ -125,29 +115,6 @@
       }
     ],
     "taskList2": [
-      {
-        "title": "活动刷币",
-        "description": "引燃活动刷满币记得点名",
-        "done": false
-      },
-      {
-        "title": "HappyDay~",
-        "description": "消灭怪物记得领取奥，最后可以换传说卷",
-        "done": false
-      },
-      {
-        "title": "AUT任务",
-        "description": "今天也要加油哦",
-        "done": false
-      },
-      {
-        "title": "ARC任务",
-        "description": "今天也要加油哦",
-        "done": false
-      }
-
-    ],
-    "taskList3": [
       {
         "title": "终极怪物公园",
         "description": "260以上才可以去",
@@ -159,15 +126,28 @@
         "done": false
       },
       {
-        "title": "航海任务",
-        "description": "组航和单人不共享能量",
+        "title": "活动打怪",
+        "description": "引燃活动刷满币记得点名",
         "done": false
       },
       {
-        "title": "贝勒德",
-        "description": "能3核就不要混车了",
+        "title": "神秘河每日",
+        "description": "每日经验也不错",
         "done": false
       },
+      {
+        "title": "神都每日",
+        "description": "今天也要加油哦",
+        "done": false
+      },
+      {
+        "title": "神秘河小游戏",
+        "description": "任务小游戏",
+        "done": false
+      }
+
+    ],
+    "taskList3": [
       {
         "title": "乌鲁斯",
         "description": "100级以上参加，账号三次",
@@ -183,16 +163,25 @@
         "done": false
       },
       {
-        "title": "活动小游戏",
-        "description": "给活动点数可以兑换经验",
+        "title": "航海任务",
+        "description": "组航和单人不共享能量",
         "done": false
       },
       {
-        "title": "ARC小游戏",
-        "description": "你喜欢就做一下",
+        "title": "贝勒德",
+        "description": "能3核就不要混车了",
+        "done": false
+      },
+      {
+        "title": "联盟龙",
+        "description": "搬经验卷等",
+        "done": false
+      },
+      {
+        "title": "逛拍卖",
+        "description": "一天逛两次，每次都有新感觉",
         "done": false
       }
-
     ],
     "exp": [
       {

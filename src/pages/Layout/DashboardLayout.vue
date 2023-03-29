@@ -77,6 +77,20 @@
         </template>
       </sidebar-link>
 
+      <sidebar-link to="/activity">
+        <i class="tim-icons icon-puzzle-10"></i>
+        <template v-if="!isRTL">
+          <p>近期活动</p>
+        </template>
+      </sidebar-link>
+
+      <sidebar-link to="/tool">
+        <i class="tim-icons icon-puzzle-10"></i>
+        <template v-if="!isRTL">
+          <p>常用工具</p>
+        </template>
+      </sidebar-link>
+
       <!-- <sidebar-link to="/typography">
         <i class="tim-icons icon-align-center"></i>
 

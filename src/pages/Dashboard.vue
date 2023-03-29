@@ -159,7 +159,7 @@
         <card type="tasks" class="task">
           <template slot="header">
             <template v-if="!isRTL">
-              <h6 class="title d-inline">消灭怪物类</h6>
+              <h6 class="title d-inline">经验优先类</h6>
             </template>
             <template v-else>
               <h6 class="title d-inline">الشحنات</h6>
@@ -178,7 +178,7 @@
         <card type="tasks" class="task">
           <template slot="header">
             <template v-if="!isRTL">
-              <h6 class="title d-inline">任务副本类</h6>
+              <h6 class="title d-inline">搬砖优先类</h6>
             </template>
             <template v-else>
               <h6 class="title d-inline">الشحنات</h6>
@@ -210,6 +210,9 @@
             <task-list tag="week"></task-list>
           </div>
         </card>
+      </div>
+      <div>
+        <base-button type="success" fill @click="clearList()">进度重置</base-button>
       </div>
       <!-- <div class="col-lg-6 col-md-12">
         <card class="card">
@@ -384,6 +387,11 @@ export default {
       this.bigLineChart.chartData = chartData;
       this.bigLineChart.activeIndex = index;
     },
+    clearList() {
+      localStorage.clear();
+      //刷新页面
+      location.reload();
+    }
   },
   mounted() {
     this.i18n = this.$i18n;
@@ -403,7 +411,7 @@ export default {
 </script>
 <style>
 .card {
-  height: 280px;
+  height: 50%;
 }
 
 </style>
