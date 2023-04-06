@@ -137,7 +137,7 @@
     </div> -->
     <div class="row">
       <div class="col-lg-6 col-md-12">
-        <card type="tasks" class="task">
+        <card type="tasks" class="task table-card">
           <template slot="header">
             <template v-if="!isRTL">
               <h6 class="title d-inline">签到、点击、挂机类</h6>
@@ -156,7 +156,7 @@
       </div>
 
       <div class="col-lg-6 col-md-12">
-        <card type="tasks" class="task">
+        <card type="tasks" class="task table-card">
           <template slot="header">
             <template v-if="!isRTL">
               <h6 class="title d-inline">经验优先类</h6>
@@ -175,7 +175,7 @@
       </div>
 
       <div class="col-lg-6 col-md-12">
-        <card type="tasks" class="task">
+        <card type="tasks" class="task table-card">
           <template slot="header">
             <template v-if="!isRTL">
               <h6 class="title d-inline">搬砖优先类</h6>
@@ -194,7 +194,7 @@
       </div>
 
       <div class="col-lg-6 col-md-12">
-        <card type="tasks" class="task">
+        <card type="tasks" class="task table-card">
           <template slot="header">
             <template v-if="!isRTL">
               <h6 class="title d-inline">周任务</h6>
@@ -410,8 +410,8 @@ export default {
 };
 </script>
 <style>
-.card {
-  height: 50%;
+.table-card {
+  height: 100%;
 }
 
 </style>

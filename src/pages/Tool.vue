@@ -22,21 +22,21 @@
                     </template>
                 </template>
                 <div class="row" v-for="(ball,index) in balls" :key="index">
-                    <div class="col-md-2 px-md-1 text-left">
+                    <div class=" col-sm text-left">
                         <fieldset disabled>
                             <base-input label="岛名字" v-model="balls[index].name" disable></base-input>
                         </fieldset>
                     </div>
-                    <div class="col-md-2 px-md-1 text-left">
+                    <div class="col-md-2 col-sm text-left">
                         <base-input label="每日获取量" v-model="balls[index].daily"></base-input>
                     </div>
-                    <div class="col-md-2 px-md-1 text-left">
+                    <div class="col-md-2 col-sm text-left">
                         <base-input label="当前等级" placeholder="当前等级" v-model="balls[index].nowLevel"></base-input>
                     </div>
-                    <div class="col-md-2 px-md-1 text-left">
+                    <div class="col-md-2 col-sm text-left">
                         <base-input label="当前等级的球数" placeholder="当前等级的球数" v-model="balls[index].nowCount"></base-input>
                     </div>
-                    <div class="col-md-2 px-md-1 text-left">
+                    <div class="col-md-2 col-sm text-left">
                         <base-input label="还需要多少天" placeholder="还需要多少天" v-model="balls[index].needDay"></base-input>
                     </div>
                 </div>
