@@ -178,5 +178,6 @@ export default {
 <style>
 .table-card {
   height: 100%;
+  padding-bottom: 10px;
 }
 </style>

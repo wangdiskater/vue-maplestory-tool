@@ -39,20 +39,25 @@ export default {
     data() {
         return {
             url: require("@/assets/maplestory/MapleDailies/ChuChu.png"),
-            innerTask: ""
+            innerTask: "",
+            innerPrefix: this.prefix
         }
     },
     computed: {
         tableData() {
             for (let index = 0; index < this.tasks.length; index++) {
                 let element = this.tasks[index];
-                element.url = this.prefix + element.image;
+                element.url = this.innerPrefix + element.image;
             }
             this.innerTask = this.tasks;
             return this.innerTask;
         },
     },
-
+    watch: {
+        prefix: function(newValue, oldValue) {
+            this.innerPrefix = newValue;
+        }
+    },
     mounted() {
         let arr = this.tasks;
         // 更新完把缓存的数据补上
@@ -64,6 +69,7 @@ export default {
                 arr[index].done = taskEntity.done;
             }
         }
+
     },
 
     methods: {
