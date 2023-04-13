@@ -4,11 +4,11 @@
         <div class="col-12">
             <card type="table-responsive text-left">
                 <template slot="header">
-                    <template v-if="!isRTL">
+                    <template>
                         <h1 class="title d-inline">未来东京城</h1>
                     </template>
                 </template>
-                <div class="table-full-width table-responsive" v-for="image in images1" :key="image">
+                <div class="table-full-width table-responsive" v-for="image in images1" :key="image.url">
                     <img :src="image.url" :width="image.width" />
                 </div>
             </card>
@@ -17,11 +17,11 @@
 
             <card type="table-responsive text-left">
                 <template slot="header">
-                    <template v-if="!isRTL">
+                    <template>
                         <h1 class="title d-inline">春天的气息</h1>
                     </template>
                 </template>
-                <div class="table-full-width table-responsive" v-for="image in images2" :key="image">
+                <div class="table-full-width table-responsive" v-for="image in images2" :key="image.url">
                     <img :src="image.url" :width="image.width" />
                 </div>
             </card>
@@ -30,11 +30,11 @@
 
             <card type="table-responsive text-left">
                 <template slot="header">
-                    <template v-if="!isRTL">
+                    <template>
                         <h1 class="title d-inline">短中分</h1>
                     </template>
                 </template>
-                <div class="table-full-width table-responsive" v-for="image in images3" :key="image">
+                <div class="table-full-width table-responsive" v-for="image in images3" :key="image.url">
                     <img :src="image.url" :width="image.width" />
                 </div>
             </card>
@@ -42,11 +42,11 @@
         <div class="col-12">
             <card type="table-responsive text-left">
                 <template slot="header">
-                    <template v-if="!isRTL">
+                    <template>
                         <h1 class="title d-inline">其他</h1>
                     </template>
                 </template>
-                <div class="table-full-width table-responsive" v-for="image in images4" :key="image">
+                <div class="table-full-width table-responsive" v-for="image in images4" :key="image.url">
                     <img :src="image.url" :width="image.width" />
                 </div>
             </card>

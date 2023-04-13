@@ -71,7 +71,6 @@ import {
 import TaskList from "./Dashboard/TaskList";
 import BaseTable from "@/components/BaseTable";
 import BaseButton from "@/components/BaseButton";
-import msdata from "@/maplestory";
 
 
 export default {
@@ -202,7 +201,6 @@ export default {
     },
     created() {},
     mounted() {
-        console.log(msdata);
     }
 }
 </script>

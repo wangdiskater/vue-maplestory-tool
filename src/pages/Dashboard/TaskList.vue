@@ -69,7 +69,7 @@ export default {
       // 更新完把缓存的数据补上
       for (const index in arr) {
         let title = arr[index].title;
-        console.log(arr[index].title);
+        // console.log(arr[index].title);
         let userJsonStr = localStorage.getItem(title);
         if(userJsonStr != null) {
           let taskEntity = JSON.parse(userJsonStr);
@@ -81,12 +81,12 @@ export default {
 
   methods: {
     clickEvent(row) {
-      console.log(row);
+      // console.log(row);
       row.done = !row.done;
       let title = row.title;
       // 保存数据
       localStorage.setItem(title, JSON.stringify(row));
-      console.log("save success " + title)
+      // console.log("save success " + title)
 
     }
   }

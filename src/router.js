@@ -10,6 +10,7 @@ import Tool from "@/pages/Tool.vue";
 import TableList from "@/pages/TableList.vue";
 import Typography from "@/pages/Typography.vue";
 import UpgradeToPRO from "@/pages/UpgradeToPRO.vue";
+import Tracker from "@/pages/Tracker.vue";
 
 const routes = [
   {
@@ -37,6 +38,11 @@ const routes = [
         path: "tool",
         name: "Tool",
         component: Tool,
+      },
+      {
+        path: "tracker",
+        name: "Tracker",
+        component: Tracker,
       },
       {
         path: "maps",

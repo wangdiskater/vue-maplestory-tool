@@ -91,6 +91,13 @@
         </template>
       </sidebar-link>
 
+      <sidebar-link to="/tracker">
+        <i class="tim-icons icon-puzzle-10"></i>
+        <template v-if="!isRTL">
+          <p>GMSR每日</p>
+        </template>
+      </sidebar-link>
+
       <!-- <sidebar-link to="/typography">
         <i class="tim-icons icon-align-center"></i>
 
