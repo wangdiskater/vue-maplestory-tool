@@ -16,7 +16,7 @@
                 </base-button>
             </td> -->
         <td>
-            <input type="text" placeholder="time you need" :value='row.spendTime'/>
+            <input type="text" placeholder="time you need" v-model='row.spendTime' class="timeImput" />
         </td>
         <td class="td-actions text-right">
             <base-checkbox v-model="row.done"></base-checkbox>
@@ -29,7 +29,10 @@
 import BaseButton from "@/components/BaseButton";
 import BaseTable from "@/components/BaseTable";
 import BaseCheckbox from "@/components/BaseCheckbox";
-import { Card, BaseInput } from "@/components/index";
+import {
+    Card,
+    BaseInput
+} from "@/components/index";
 
 export default {
 
@@ -45,7 +48,7 @@ export default {
         return {
             url: require("@/assets/maplestory/MapleDailies/ChuChu.png"),
             innerTask: "",
-            innerPrefix: this.prefix
+            innerPrefix: this.prefix,
         }
     },
     computed: {
@@ -53,12 +56,14 @@ export default {
             for (let index = 0; index < this.tasks.length; index++) {
                 let element = this.tasks[index];
                 element.url = this.innerPrefix + element.image;
+                // element.spendTime = 0;
             }
             this.innerTask = this.tasks;
             return this.innerTask;
         },
     },
     watch: {
+        // 父类动态更新子类
         prefix: function (newValue, oldValue) {
             this.innerPrefix = newValue;
         }
@@ -68,10 +73,12 @@ export default {
         // 更新完把缓存的数据补上
         for (const index in arr) {
             let title = arr[index].name;
-            let userJsonStr = localStorage.getItem(title);
+            let userJsonStr = localStorage.getItem("ms-" + title);
             if (userJsonStr != null) {
                 let taskEntity = JSON.parse(userJsonStr);
                 arr[index].done = taskEntity.done;
+                arr[index].spendTime = taskEntity.spendTime;
+
             }
         }
 
@@ -86,8 +93,11 @@ export default {
             console.log(row);
 
             // 保存数据
-            localStorage.setItem(title, JSON.stringify(row));
+            localStorage.setItem("ms-" + title, JSON.stringify(row));
             // console.log("save success " + title)
+
+            // 触发重新计算时间
+            this.$emit('handleChange', row);
 
         }
     }
@@ -98,5 +108,9 @@ export default {
 .track-img {
     max-width: 50px;
     max-height: 50px;
+}
+
+.timeImput {
+    width: 90%;
 }
 </style>

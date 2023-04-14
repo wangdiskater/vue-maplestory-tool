@@ -1,12 +1,17 @@
 <template>
 <div class="content">
     <div class="type-key">
+        <base-alert type="info">
+            <strong>Info!</strong> You need all time: {{needTime}} minutes
+        </base-alert>
         <!-- <span>Reset in: {{ resetTime }}</span> -->
         <span class="task-btn" v-for=" typeKey in typeKeys" :key="typeKey.key">
             <base-button :type="typeKey.type" @click="clickEvent(typeKey.key)" class="animation-on-hover">{{ typeKey.key
                 }}</base-button>
         </span>
-        <base-button type="success" fill @click="clearList()">Reset</base-button>
+        <span class="task-btn">
+            <base-button type="danger" fill @click="clearList()">Reset</base-button>
+        </span>
     </div>
     <div class="row">
         <div :class="taskStyle" v-for=" taskkey in taskKeys" :key="taskkey" style="margin:10px 0;">
@@ -24,7 +29,7 @@
                     <!-- <task-list tag="today"></task-list> -->
                     <!-- <tracker-list tag="today"></tracker-list> -->
                     <!-- <tracker-list :tasks='tasks' :prefix='imagePrefix'></tracker-list> -->
-                    <tracker-list :tasks='tasksMap.get(taskkey)' :prefix='imagePrefix'></tracker-list>
+                    <tracker-list :tasks='tasksMap.get(taskkey)' :prefix='imagePrefix' @handleChange="changeName"></tracker-list>
 
                 </div>
             </card>
@@ -44,6 +49,7 @@ import TaskList from "./Dashboard/TaskList";
 import TrackerList from "./Tracker/TrackerList";
 import UserTable from "./Dashboard/UserTable";
 import msdata from "@/maplestory";
+import BaseAlert from "@/components/BaseAlert";
 
 export default {
     components: {
@@ -53,6 +59,7 @@ export default {
         TaskList,
         UserTable,
         TrackerList,
+        BaseAlert
     },
     data() {
         return {
@@ -64,7 +71,8 @@ export default {
             seconds: 864000,
             seconds2: 864000,
             resetTime: '',
-            resetTime2: ''
+            resetTime2: '',
+            needTime: 0
 
         }
     },
@@ -196,7 +204,7 @@ export default {
                 this.seconds -= 1
                 this.countDown(this.seconds);
 
-                this.seconds2 -=1;
+                this.seconds2 -= 1;
                 this.countDown2(this.seconds2);
 
             }, 1000)
@@ -211,6 +219,10 @@ export default {
             console.log(sec);
 
             return sec;
+        },
+        changeName(row) {
+            console.log(row)
+            this.needTime = parseInt(this.needTime) + parseInt(row.spendTime);
         }
     },
     created() {
@@ -223,6 +235,23 @@ export default {
     mounted() {
         this.seconds = this.getCountDownSecond();
         this.time();
+        //获取缓存中的数据
+        for (var key in localStorage) {
+            if (key.indexOf("ms-") == -1) {
+                continue;
+            }
+            let data = localStorage.getItem(key);
+            if (data != null) {
+                let taskEntity = JSON.parse(data);
+                if (taskEntity.spendTime != null) {
+                    console.log(taskEntity)
+                    this.needTime = parseInt(this.needTime) + parseInt(taskEntity.spendTime);
+
+                }
+
+            }
+        }
+
     }
 }
 </script>
