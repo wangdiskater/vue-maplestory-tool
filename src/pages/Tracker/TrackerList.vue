@@ -15,8 +15,11 @@
                     <i class="tim-icons icon-pencil"></i>
                 </base-button>
             </td> -->
+        <td>
+            <input type="text" placeholder="time you need" :value='row.spendTime'/>
+        </td>
         <td class="td-actions text-right">
-            <base-checkbox v-model="row.done"> </base-checkbox>
+            <base-checkbox v-model="row.done"></base-checkbox>
         </td>
     </template>
 </base-table>
@@ -26,6 +29,7 @@
 import BaseButton from "@/components/BaseButton";
 import BaseTable from "@/components/BaseTable";
 import BaseCheckbox from "@/components/BaseCheckbox";
+import { Card, BaseInput } from "@/components/index";
 
 export default {
 
@@ -35,6 +39,7 @@ export default {
         BaseButton,
         BaseTable,
         BaseCheckbox,
+        BaseInput,
     },
     data() {
         return {
@@ -54,7 +59,7 @@ export default {
         },
     },
     watch: {
-        prefix: function(newValue, oldValue) {
+        prefix: function (newValue, oldValue) {
             this.innerPrefix = newValue;
         }
     },
@@ -83,6 +88,7 @@ export default {
             // 保存数据
             localStorage.setItem(title, JSON.stringify(row));
             // console.log("save success " + title)
+
         }
     }
 };
