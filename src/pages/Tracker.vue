@@ -29,7 +29,7 @@
                     <!-- <task-list tag="today"></task-list> -->
                     <!-- <tracker-list tag="today"></tracker-list> -->
                     <!-- <tracker-list :tasks='tasks' :prefix='imagePrefix'></tracker-list> -->
-                    <tracker-list :tasks='tasksMap.get(taskkey)' :prefix='imagePrefix' @handleChange="changeName"></tracker-list>
+                    <tracker-list :tasks='tasksMap.get(taskkey)' :prefix='imagePrefix' @handleChange="changeSpendTime"></tracker-list>
 
                 </div>
             </card>
@@ -171,6 +171,24 @@ export default {
         },
         clearList() {
             localStorage.clear();
+            //获取缓存中的数据
+            // for (var key in localStorage) {
+            //     if (key.indexOf("ms-") == -1) {
+            //         continue;
+            //     }
+            //     let data = localStorage.getItem(key);
+            //     if (data != null) {
+            //         console.log(data);
+            //         let taskEntity = JSON.parse(data);
+            //         if (taskEntity.spendTime != null) {
+            //             taskEntity.done = false;
+            //             console.log(taskEntity)
+
+            //             localStorage.setItem(key, JSON.stringify(taskEntity));
+            //         }
+            //     }
+            // }
+
             //刷新页面
             location.reload();
         },
@@ -220,10 +238,11 @@ export default {
 
             return sec;
         },
-        changeName(row) {
+        changeSpendTime(row) {
             console.log(row)
             this.needTime = parseInt(this.needTime) + parseInt(row.spendTime);
         }
+
     },
     created() {
         this.tasksMap.forEach(this.logMapElements);

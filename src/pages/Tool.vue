@@ -22,10 +22,11 @@
                     </template>
                 </template>
                 <div class="row" v-for="(ball,index) in balls" :key="index">
-                    <div class=" col-sm text-left">
-                        <fieldset disabled>
+                    <div class="col-md-1 text-left">
+                        <!-- <fieldset disabled>
                             <base-input label="岛名字" v-model="balls[index].name" disable></base-input>
-                        </fieldset>
+                        </fieldset> -->
+                        <img :src="require('@/assets/maplestory/SymbolImages/' + balls[index].image)" alt="" class="ball-img">
                     </div>
                     <div class="col-md-2 col-sm text-left">
                         <base-input label="每日获取量" v-model="balls[index].daily"></base-input>
@@ -132,42 +133,49 @@ export default {
                     daily: 14,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image: "VanishingJourney.png"
                 },
                 {
                     name: "啾啾球",
                     daily: 19,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image: "ChuChu.png"
                 },
                 {
                     name: "拉克兰",
                     daily: 12,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image:"Lachelein.png"
                 },
                 {
                     name: "阿尔球",
                     daily: 12,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image:"Arcana.png"
+
                 },
                 {
                     name: "魔拉球",
                     daily: 8,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image:"Morass.png"
                 },
                 {
                     name: "艾斯球",
                     daily: 8,
                     nowLevel: 1,
                     nowCount: 1,
-                    needDay: ""
+                    needDay: "",
+                    image:"Esfera.png"
                 }
             ]
 
@@ -209,5 +217,9 @@ export default {
 .url-size {
     padding-right: 20px;
     display: inline-block;
+}
+.ball-img {
+    width: 30%;
+    padding: 30% 0;
 }
 </style>
