@@ -14,10 +14,9 @@
       :aria-hidden="!show"
     >
       <div
-        class="modal-dialog"
+        class="my-modal-dialog"
         :class="[
           { 'modal-notice': type === 'notice' },
-          { 'modal-dialog-centered': centered },
           modalClasses,
         ]"
       >
@@ -113,4 +112,7 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.my-modal-dialog{
+  margin: 1.75rem auto;
+}</style>

@@ -2,6 +2,7 @@
 <div class="content">
     <div class="row">
         <div class="col-12">
+
             <card type="table-responsive text-left">
                 <template slot="header">
                     <template>
@@ -23,9 +24,6 @@
                 </template>
                 <div class="row" v-for="(ball,index) in balls" :key="index">
                     <div class="col-md-1 text-left">
-                        <!-- <fieldset disabled>
-                            <base-input label="岛名字" v-model="balls[index].name" disable></base-input>
-                        </fieldset> -->
                         <img :src="require('@/assets/maplestory/SymbolImages/' + balls[index].image)" alt="" class="ball-img">
                     </div>
                     <div class="col-md-2 col-sm text-left">
@@ -46,8 +44,9 @@
                 </div>
             </card>
         </div>
-
+        <!-- 
         <div class="col-12" v-for="tool in imgTool" :key="tool.text">
+
             <card type="table-responsive text-left">
                 <template slot="header">
                     <template>
@@ -58,7 +57,31 @@
                     <img :src="tool.url" :width="tool.width" />
                 </div>
             </card>
+        </div> -->
+
+        <div class="col-12">
+            <card type="table-responsive text-left">
+                <template slot="header">
+                    <template>
+                        <h1 class="title d-inline">常用工具</h1>
+                    </template>
+                </template>
+                <div class="tool-image" v-for="tool in imgTool" :key="tool.text">
+                    <base-button type="warning" @click="tool.modal0 = true">
+                        {{tool.text}}
+                    </base-button>
+                    <modal :show.sync="tool.modal0">
+                        <div class="table-full-width table-responsive">
+                            <img :src="tool.url" :width="tool.width" />
+                        </div>
+                        <template slot="footer">
+                            <base-button type="secondary" @click="tool.modal0 = false">Close</base-button>
+                        </template>
+                    </modal>
+                </div>
+            </card>
         </div>
+
     </div>
 </div>
 </template>
@@ -72,7 +95,7 @@ import {
 import TaskList from "./Dashboard/TaskList";
 import BaseTable from "@/components/BaseTable";
 import BaseButton from "@/components/BaseButton";
-
+import Modal from "@/components/Modal";
 
 export default {
     components: {
@@ -81,6 +104,7 @@ export default {
         BaseInput,
         BaseButton,
         TaskList,
+        Modal,
 
     },
     data() {
@@ -102,26 +126,43 @@ export default {
 
             ],
             imgTool: [{
+                    modal0: false,
                     text: "完美核心",
                     url: require("@/assets/tool/core.jpg"),
-                    width: "80%"
+                    width: "60%"
                 },
                 {
+                    modal0: false,
                     text: "航海单人",
                     url: require("@/assets/tool/danhang.jpg"),
-                    width: "80%"
+                    width: "60%"
                 },
                 {
+                    modal0: false,
                     text: "内在概率表",
                     url: require("@/assets/tool/neizai.png"),
                     width: "60%"
                 },
                 {
+                    modal0: false,
+                    text: "全职业内在参考",
+                    url: require("@/assets/tool/neizai2.jpg"),
+                    width: "60%"
+                },
+                {
+                    modal0: false,
+                    text: "全职业内在参考2",
+                    url: require("@/assets/tool/neizai3.jpg"),
+                    width: "60%"
+                },
+                {
+                    modal0: false,
                     text: "经验倍增计算表",
                     url: require("@/assets/tool/exp1.jpg"),
                     width: "80%"
                 },
                 {
+                    modal0: false,
                     text: "经验拉满升级攻略",
                     url: require("@/assets/tool/exp2.png"),
                     width: "80%"
@@ -150,7 +191,7 @@ export default {
                     nowLevel: 1,
                     nowCount: 1,
                     needDay: "",
-                    image:"Lachelein.png"
+                    image: "Lachelein.png"
                 },
                 {
                     name: "阿尔球",
@@ -158,7 +199,7 @@ export default {
                     nowLevel: 1,
                     nowCount: 1,
                     needDay: "",
-                    image:"Arcana.png"
+                    image: "Arcana.png"
 
                 },
                 {
@@ -167,7 +208,7 @@ export default {
                     nowLevel: 1,
                     nowCount: 1,
                     needDay: "",
-                    image:"Morass.png"
+                    image: "Morass.png"
                 },
                 {
                     name: "艾斯球",
@@ -175,7 +216,7 @@ export default {
                     nowLevel: 1,
                     nowCount: 1,
                     needDay: "",
-                    image:"Esfera.png"
+                    image: "Esfera.png"
                 }
             ]
 
@@ -208,8 +249,7 @@ export default {
         }
     },
     created() {},
-    mounted() {
-    }
+    mounted() {}
 }
 </script>
 
@@ -218,8 +258,13 @@ export default {
     padding-right: 20px;
     display: inline-block;
 }
+
 .ball-img {
     width: 30%;
     padding: 30% 0;
+}
+.tool-image{
+    display: inline-block;
+
 }
 </style>
