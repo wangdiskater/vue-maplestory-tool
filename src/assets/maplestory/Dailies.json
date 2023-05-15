@@ -6,7 +6,7 @@
             "title": "Daily Bosses",
             "tasks": [
                 {
-                    "name": "Zakum",
+                    "name": "扎昆",
                     "image": "Zakum.png",
                     "done": false,
                     "enabled": true,

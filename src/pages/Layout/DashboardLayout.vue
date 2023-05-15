@@ -94,7 +94,7 @@
       <sidebar-link to="/tracker">
         <i class="tim-icons icon-puzzle-10"></i>
         <template v-if="!isRTL">
-          <p>GMSR每日</p>
+          <p>每日（新）</p>
         </template>
       </sidebar-link>
 
