@@ -9,7 +9,7 @@
         { 'modal-mini': type === 'mini' },
       ]"
       v-show="show"
-      tabindex="-1"
+      tabindex="0"
       role="dialog"
       :aria-hidden="!show"
     >
@@ -114,5 +114,6 @@ export default {
 
 <style>
 .my-modal-dialog{
-  margin: 1.75rem auto;
+  margin: 2rem auto;
+  width: 75%;
 }</style>

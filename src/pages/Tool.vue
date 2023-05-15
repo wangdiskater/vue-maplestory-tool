@@ -1,7 +1,7 @@
 <template>
 <div class="content">
     <div class="row">
-        <div class="col-12">
+        <!-- <div class="col-12">
 
             <card type="table-responsive text-left">
                 <template slot="header">
@@ -43,7 +43,7 @@
                     <base-button type="success" fill @click="caculatorDay">计算</base-button>
                 </div>
             </card>
-        </div>
+        </div> -->
         <!-- 
         <div class="col-12" v-for="tool in imgTool" :key="tool.text">
 
@@ -60,7 +60,7 @@
         </div> -->
 
         <div class="col-12">
-            <card type="table-responsive text-left">
+            <card type="text-left">
                 <template slot="header">
                     <template>
                         <h1 class="title d-inline">常用工具</h1>
@@ -71,7 +71,7 @@
                         {{tool.text}}
                     </base-button>
                     <modal :show.sync="tool.modal0">
-                        <div class="table-full-width table-responsive">
+                        <div class="table-full-width">
                             <img :src="tool.url" :width="tool.width" />
                         </div>
                         <template slot="footer">
@@ -125,48 +125,55 @@ export default {
                 }
 
             ],
-            imgTool: [{
+            imgTool: [     
+                {
                     modal0: false,
-                    text: "完美核心",
-                    url: require("@/assets/tool/core.jpg"),
+                    text: "test",
+                    url: require("@/assets/tool/test.jpg"),
                     width: "60%"
-                },
-                {
-                    modal0: false,
-                    text: "航海单人",
-                    url: require("@/assets/tool/danhang.jpg"),
-                    width: "60%"
-                },
-                {
-                    modal0: false,
-                    text: "内在概率表",
-                    url: require("@/assets/tool/neizai.png"),
-                    width: "60%"
-                },
-                {
-                    modal0: false,
-                    text: "全职业内在参考",
-                    url: require("@/assets/tool/neizai2.jpg"),
-                    width: "60%"
-                },
-                {
-                    modal0: false,
-                    text: "全职业内在参考2",
-                    url: require("@/assets/tool/neizai3.jpg"),
-                    width: "60%"
-                },
-                {
-                    modal0: false,
-                    text: "经验倍增计算表",
-                    url: require("@/assets/tool/exp1.jpg"),
-                    width: "80%"
-                },
-                {
-                    modal0: false,
-                    text: "经验拉满升级攻略",
-                    url: require("@/assets/tool/exp2.png"),
-                    width: "80%"
-                },
+                },       
+                // {
+                //     modal0: false,
+                //     text: "完美核心",
+                //     url: require("@/assets/tool/core.jpg"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "航海单人",
+                //     url: require("@/assets/tool/danhang.jpg"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "内在概率表",
+                //     url: require("@/assets/tool/neizai.png"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "全职业内在参考",
+                //     url: require("@/assets/tool/neizai2.jpg"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "全职业内在参考2",
+                //     url: require("@/assets/tool/neizai3.jpg"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "经验倍增计算表",
+                //     url: require("@/assets/tool/exp1.jpg"),
+                //     width: "60%"
+                // },
+                // {
+                //     modal0: false,
+                //     text: "经验拉满升级攻略",
+                //     url: require("@/assets/tool/exp2.png"),
+                //     width: "60%"
+                // },
 
             ],
             balls: [{
